@@ -1,0 +1,33 @@
+.main-container {
+  @include flex-center(column);
+  background-color: $bg-color;
+  margin-top: 20px;
+  width: 100vw;
+
+  .login-box {
+    @include flex-center(column);
+    width: 40%;
+    padding: 40px 80px;
+
+    @include big {
+      width: 100vw;
+      border-radius: 0;
+      padding: 0;
+      padding-top: 20px;
+    }
+
+    &-heading {
+      font-size: 35px;
+      color: #1b88f4;
+    }
+
+    .small-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include big {
+        padding: 0px 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@import "./variable";
+@import "./media";
+.navbar {
+  @include flex-center(row);
+  background-color: $nav-footer;
+  height: 64px;
+  color: white;
+
+  @include md {
+    flex-direction: column;
+    height: min-content;
+    justify-content: flex-start;
+    .navbar-box-1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100vw;
+      justify-content: space-around;
+      height: 64px;
+      z-index: 3;
+      position: relative;
+      background-color: $nav-footer;
+    }
+    .navbar-box-2 {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      z-index: 2;
+      background-color: #fff;
+      position: relative;
+      padding: 20px;
+    }
+  }
+
+  &-links-box {
+    display: flex;
+    margin: 0px 10px;
+    @include md {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    & li {
+      list-style: none;
+      margin: 0px 20px;
+
+      & a {
+        text-decoration: none;
+        color: #d1d6da;
+        font-size: 14px;
+        font-weight: 400;
+        &:focus {
+          color: gold;
+        }
+
+        @include md {
+          color: $nav-footer;
+          font-size: 16px;
+          line-height: 32px;
+
+          &:focus {
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+
+  & button {
+    display: none;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    @include md {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .navbar-search {
+    border-radius: $border-radius;
+    @include flex-center(row);
+    justify-content: space-between;
+    width: 258px;
+    height: 37px;
+    padding: 10px;
+    background-color: #fff;
+
+    &-icon {
+      color: $nav-footer;
+      font-size: 16px;
+    }
+
+    &-input {
+      width: 200px;
+      height: 37px;
+      letter-spacing: 1px;
+      font-size: 16px;
+      border: none;
+
+      &:focus-visible {
+        outline-offset: 0px;
+        outline: none;
+      }
+    }
+  }
+}

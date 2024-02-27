@@ -1,0 +1,79 @@
+@import "./variable";
+@import "./mixin";
+
+.header {
+  margin-top: 20px;
+  @include md {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 20px;
+  }
+
+  &-heading {
+    font-size: 35px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  &-details {
+    @include md {
+      display: none;
+    }
+    @include flex-center(row);
+    justify-content: space-evenly;
+    position: relative;
+    padding: 10px 20px;
+    margin-top: 10px;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 100vw;
+      height: 2px;
+      left: 0px;
+      top: 0px;
+      background-color: gray;
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      width: 100vw;
+      height: 2px;
+      left: 0px;
+      bottom: 0px;
+      background-color: gray;
+    }
+
+    &-text {
+      @include flex-center(row);
+      font-size: 14px;
+      letter-spacing: 1px;
+
+      & > div {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px 15px;
+
+        & > span {
+          @include flex-center(row);
+          font-size: 14px;
+          margin: 0px 5px;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    &-select {
+      background-color: transparent;
+      border: none;
+
+      &:focus-visible {
+        outline-offset: 0px;
+        outline: none;
+      }
+    }
+  }
+}

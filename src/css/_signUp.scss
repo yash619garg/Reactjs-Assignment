@@ -1,0 +1,47 @@
+.signUp {
+  @include flex-center(row);
+  justify-content: space-evenly;
+  margin: 22px 0px;
+  @include md {
+    flex-direction: column;
+  }
+
+  &-heading {
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: gray;
+    text-transform: capitalize;
+    text-align: center;
+    @include md {
+      width: 90vw;
+    }
+  }
+  &-input {
+    @include flex-center(row);
+    @include md {
+      margin-top: 20px;
+    }
+
+    & input {
+      height: 30px;
+      padding: 10px 20px;
+      border: 0;
+    }
+    & button {
+      height: 30px;
+      padding: 0px 20px;
+      font-size: 16px;
+      text-align: center;
+      background-color: #1b88f4;
+      border: none;
+      color: #fff;
+      text-transform: capitalize;
+      cursor: pointer;
+
+      & a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}

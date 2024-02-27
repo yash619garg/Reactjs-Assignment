@@ -1,0 +1,20 @@
+@import "./variable";
+@import "./mixin";
+@import "./media";
+@import "./reset";
+
+@import "./navbar";
+@import "./header";
+@import "./filter";
+@import "./items";
+@import "./deals";
+@import "./signUp";
+@import "./footer";
+@import "./category";
+@import "./loginPage";
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $bg-color;
+}

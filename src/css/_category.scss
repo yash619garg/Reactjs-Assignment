@@ -1,0 +1,51 @@
+.category-page {
+  @include flex-center(column);
+  &-heading {
+    font-size: 35px;
+    margin-top: 20px;
+    text-align: center;
+    width: 80%;
+    @include sm {
+      font-size: 30px;
+    }
+  }
+  &-subHead {
+    width: 80vw;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: gray;
+    @include sm {
+      font-size: 18px;
+    }
+  }
+
+  .all-category-container {
+    @include flex-center(column);
+    width: 80vw;
+    margin-top: 20px;
+
+    .SingleCat {
+      @include flex-center(column);
+      background-color: #fff;
+      margin: 20px 0px;
+      padding: 20px 30px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 2px 2px 3px gray;
+
+      &-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1b88f4;
+      }
+
+      &-about {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 10px;
+        color: gray;
+      }
+    }
+  }
+}
